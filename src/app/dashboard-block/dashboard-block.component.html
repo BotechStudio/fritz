@@ -1,0 +1,36 @@
+<div class="dashboard">
+  <div class="top-bar">
+    <img class="app-logo" src="assets/images/logo.svg" alt="Fritz Logo" height="36" width="95" />
+  </div>
+
+  <div class="grid-container">
+    <div
+      class="grid-item"
+      *ngFor="let item of menuItems"
+      [ngClass]="{ selected: selectedItem === item }"
+      (click)="onSelect(item)"
+    >
+      <div class="icon-container" *ngIf="(item.option ?? []).length > 0">
+        <mat-icon
+          class="icon-left plane-icon"
+          [ngClass]="{ active: item.option.includes('plane') }"
+        >
+          airplanemode_on
+        </mat-icon>
+
+        <mat-icon
+          class="icon-left hub-icon"
+          [ngClass]="{ active: item.option.includes('hub') }"
+        >
+          hub
+        </mat-icon>
+      </div>
+
+      <div class="icon-wrapper">
+        <mat-icon class="icon">{{ item.icon }}</mat-icon>
+      </div>
+
+      <p class="label">{{ item.label }}</p>
+    </div>
+  </div>
+</div>
