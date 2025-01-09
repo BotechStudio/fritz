@@ -4,33 +4,45 @@
   </div>
 
   <div class="grid-container">
-    <div
-      class="grid-item"
-      *ngFor="let item of menuItems"
-      [ngClass]="{ selected: selectedItem === item }"
-      (click)="onSelect(item)"
-    >
-      <div class="icon-container" *ngIf="(item.option ?? []).length > 0">
-        <mat-icon
-          class="icon-left plane-icon"
-          [ngClass]="{ active: item.option.includes('plane') }"
-        >
-          airplanemode_on
-        </mat-icon>
 
-        <mat-icon
-          class="icon-left hub-icon"
-          [ngClass]="{ active: item.option.includes('hub') }"
-        >
-          hub
-        </mat-icon>
+      <div
+        class="grid-item"
+        *ngFor="let item of menuItems"
+        [ngClass]="{ selected: selectedItem === item }"
+        (click)="onSelect(item)"
+      >
+        <div class="icon-container" *ngIf="(item.option ?? []).length > 0">
+          <mat-icon
+            class="icon-left plane-icon"
+            [ngClass]="{
+    'active': item.option.includes('plane'),
+    'icon-selected': item.option.includes('plane') && selectedItem === item
+  }"
+          >
+            airplanemode_on
+          </mat-icon>
+
+          <svg-icon
+            src="assets/images/union-img.svg"
+            [svgClass]="
+    item.option.includes('hub') && selectedItem === item
+      ? 'custom-icon icon-active icon-selected'
+      : item.option.includes('hub')
+      ? 'custom-icon icon-active'
+      : 'custom-icon'
+  "
+          ></svg-icon>
+        </div>
+
+        <div class="icon-wrapper">
+          <svg-icon
+            [src]="item.img"
+            [ngClass]="{ 'icon-selected': selectedItem === item }"
+            svgClass="item-icon"
+          ></svg-icon>
+        </div>
+
+        <p class="label">{{ item.label }}</p>
       </div>
-
-      <div class="icon-wrapper">
-        <mat-icon class="icon">{{ item.icon }}</mat-icon>
-      </div>
-
-      <p class="label">{{ item.label }}</p>
     </div>
-  </div>
 </div>
