@@ -20,8 +20,8 @@ export class DashboardBlockComponent {
   menuItems: MenuItem[] = [
     { label: 'משימות', img: 'assets/images/item-img1.svg', option: ['hub'] },
     { label: 'הזמנות', img: 'assets/images/item-img2.svg', option: ['plane'] },
-    { label: 'מעקב משלוחים', img: 'assets/images/item-img3.svg', option: ['hub'] },
-    { label: 'בקרת איכות', img: 'assets/images/item-img4.svg', option: ['hub'] },
+    { label: 'מעקב משלוחים', img: 'assets/images/item-img11.svg', option: ['hub'] },
+    { label: 'בקרת איכות', img: 'assets/images/item-img10.svg', option: [] },
     { label: 'ניהול לקוחות', img: 'assets/images/item-img5.svg', option: ['plane', 'hub'] },
     { label: 'ניהול משתמשים', img: 'assets/images/item-img6.svg', option: ['hub'] },
     { label: 'דוחות', img: 'assets/images/item-img7.svg', option: [] },
