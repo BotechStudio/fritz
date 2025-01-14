@@ -15,9 +15,9 @@
           <mat-icon
             class="icon-left plane-icon"
             [ngClass]="{
-    'active': item.option.includes('plane'),
-    'icon-selected': item.option.includes('plane') && selectedItem === item
-  }"
+              'active': item.option.includes('plane'),
+              'icon-selected': item.option.includes('plane') && selectedItem === item
+            }"
           >
             airplanemode_on
           </mat-icon>
@@ -25,12 +25,12 @@
           <svg-icon
             src="assets/images/union-img.svg"
             [svgClass]="
-    item.option.includes('hub') && selectedItem === item
-      ? 'custom-icon icon-active icon-selected'
-      : item.option.includes('hub')
-      ? 'custom-icon icon-active'
-      : 'custom-icon'
-  "
+              item.option.includes('hub') && selectedItem === item
+                ? 'custom-icon icon-active icon-selected'
+                : item.option.includes('hub')
+                ? 'custom-icon icon-active'
+                : 'custom-icon'
+            "
           ></svg-icon>
         </div>
 

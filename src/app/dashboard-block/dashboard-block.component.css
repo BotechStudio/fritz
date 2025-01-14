@@ -3,27 +3,20 @@
   justify-content: flex-start;
   align-items: center;
   height: 80px;
-  padding: 0 20px;
-
   background: linear-gradient(135deg, #f1f1f6 0%, #d0d1d9 100%);
 
   border: 3px solid transparent;
   border-image-source: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(200, 202, 213, 0.8) 100%);
   border-image-slice: 1;
 
-  box-shadow:
-    -1px -1px 31px 0px #ffffff,
-    1px 1px 21px 0px #d4d7e6,
-    10px 10px 30px 0px #d0d3e2,
-    -5px -4px 15px 0px #ffffffd9,
-    1px 5px 14px 0px #0000005e,
-    1px 2px 8px 0px #0000005c;
+  box-shadow: 1px 2px 8px 0px rgba(0, 0, 0, 0.36), 1px 5px 14px 0px rgba(0, 0, 0, 0.37), -5px -4px 15px 0px rgba(255, 255, 255, 0.85), 10px 10px 30px 0px #D0D3E2, 1px 1px 21px 0px #D4D7E6, -1px -1px 31px 0px #FFF;
 }
 
 .app-logo {
-  height: 50px;
-  width: auto;
+  width: 100%;
+  max-width: 95px;
   object-fit: contain;
+  margin-left: 40px;
 }
 
 .grid-container {
@@ -35,7 +28,9 @@
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
+  margin-top: 69px;
   background: #E9EAEF;
+  direction: rtl;
 }
 
 .grid-item {
@@ -51,10 +46,17 @@
   background-image: linear-gradient(#f0f1f4, #dfe0e7), linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(200, 202, 213, 0.8));
   background-origin: border-box;
   background-clip: content-box, border-box;
-  box-shadow: -1px -1px 31px 0px #ffffff, 1px 1px 21px 0px #d4d7e6, 10px 10px 30px 0px #d0d3e2, -5px -4px 15px 0px #ffffffd9, 1px 5px 14px 0px #0000005e, 1px 2px 8px 0px #0000005c;
+  box-shadow:
+    1px 2px 8px 0px rgba(0, 0, 0, 0.36),
+    1px 5px 14px 0px rgba(0, 0, 0, 0.37),
+    -5px -4px 15px 0px rgba(255, 255, 255, 0.85),
+    10px 10px 30px 0px #d0d3e2,
+    1px 1px 21px 0px #d4d7e6,
+    -1px -1px 31px 0px #fff;
   padding: 3px;
   cursor: pointer;
   transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  background: var(--fill1, linear-gradient(135deg, #F0F1F4 0%, #DFE0E7 100%));
 }
 
 .grid-item.selected {
@@ -117,9 +119,9 @@
 }
 
 .label {
-  font-family: 'Ploni DL 1.1 AAA';
+  font-family: 'Fredoka', sans-serif;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 29.4px;
   text-align: center;
   text-underline-position: from-font;
